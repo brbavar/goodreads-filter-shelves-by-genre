@@ -16,7 +16,8 @@ class Shelf {
   }
 
   async setGenresToBooks() {
-    for (const i = 0; i < this.#books.length; i++) {
+    for (let i = 0; i < this.#books.length; i++) {
+      console.log(`i = ${i}`);
       const href = this.#books[i].querySelector(
         'td.field.title > div.value > a'
       ).href;
@@ -40,8 +41,8 @@ class Shelf {
         });
       }, 5000);
 
-      break;
-      iframe.remove();
+      //   break;
+      //   iframe.remove();
     }
   }
 
