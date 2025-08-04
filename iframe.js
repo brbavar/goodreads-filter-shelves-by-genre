@@ -25,7 +25,10 @@ window.addEventListener('message', (event) => {
       });
     }
 
-    if (event.data.iframeModification === 'clickToShowMoreGenres') {
+    if (
+      'iframeModification' in event.data &&
+      event.data.iframeModification === 'clickToShowMoreGenres'
+    ) {
       const genresList = document.querySelector(
         'div[data-testid="genresList"] > ul[aria-label="Top genres for this book"].CollapsableList'
       );
