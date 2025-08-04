@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "GoodReads: Filter Shelves by Genre",
+  "version": "1.0",
+  "description": "Filter your bookshelves by genre on the GoodReads website.",
+  "permissions": [],
+  "content_scripts": [
+    {
+      "matches": ["https://www.goodreads.com/review/list/*"],
+      "js": ["main.js"]
+    },
+    {
+      "matches": [
+        "https://www.goodreads.com/book/show/*",
+        "https://www.goodreads.com/work/shelves/*"
+      ],
+      "js": ["iframe.js"],
+      "all_frames": true
+    }
+  ]
+}
