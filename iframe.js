@@ -1,13 +1,4 @@
 window.addEventListener('message', (event) => {
-  //   console.log(`event.source is ${event.source}`);
-
-  //   console.log(`event.origin is ${event.origin}`);
-
-  //   console.log(`event.data is ${event.data}`);
-
-  //   console.log(`event.data.type is ${event.data.type}`);
-  //   console.log(`event.data.eventName is ${event.data.eventName}`);
-
   if (event.origin !== 'https://www.goodreads.com') {
     return;
   }
@@ -34,9 +25,6 @@ window.addEventListener('message', (event) => {
         const genreSpans = genresList.querySelectorAll(
           'span > span.BookPageMetadataSection__genreButton > a.Button > span.Button__labelItem'
         );
-        // for (const span of genreSpans) {
-        //   console.log(span.textContent);
-        // }
         const genres = [];
         for (const span of genreSpans) {
           genres.push(span.textContent);
